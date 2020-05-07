@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://res/characters/hero/hero.png" type="Texture" id=1]
 [ext_resource path="res://src/characters/hero/PlayerController.gd" type="Script" id=2]
+[ext_resource path="res://src/tools/Axe.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 16 )
+extents = Vector2( 10, 8 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -15,6 +16,7 @@ animations = [ {
 } ]
 
 [node name="Hero" type="KinematicBody2D"]
+collision_mask = 15
 script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -23,8 +25,16 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Idle"
+
+[node name="Tool" type="Node2D" parent="."]
+position = Vector2( 8, 0 )
+
+[node name="Axe" parent="Tool" instance=ExtResource( 3 )]
+
+[editable path="Tool/Axe"]
