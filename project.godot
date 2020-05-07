@@ -9,12 +9,30 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "CanvasLayer",
+"class": "GUI",
+"language": "GDScript",
+"path": "res://src/gui/GUI.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Repository",
+"language": "GDScript",
+"path": "res://src/environment/tree/Repository.gd"
+}, {
+"base": "Area2D",
+"class": "Ressource",
+"language": "GDScript",
+"path": "res://src/ressources/Ressource.gd"
+}, {
 "base": "Area2D",
 "class": "Tool",
 "language": "GDScript",
 "path": "res://src/tools/Tool.gd"
 } ]
 _global_script_class_icons={
+"GUI": "",
+"Repository": "",
+"Ressource": "",
 "Tool": ""
 }
 

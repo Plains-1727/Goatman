@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 2
+export (int) var speed = 100
 
 var velocity : Vector2 = Vector2()
 var can_move : bool = true
@@ -55,10 +55,10 @@ func _physics_process(_delta):
 
 
 	if can_move:
-		_collider = move_and_collide(velocity)
+		velocity = move_and_slide(velocity)
 
 
-func get_equipped_tool():
+func get_equipped_tool() -> void:
 	equipped_tool = $Tool.get_child(0)
 
 

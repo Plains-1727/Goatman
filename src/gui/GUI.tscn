@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://res/ressources/wood_drop.png" type="Texture" id=1]
+[ext_resource path="res://src/gui/GUI.gd" type="Script" id=2]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="label_wood" type="Label" parent="."]
+margin_left = 16.0
+margin_right = 56.0
+margin_bottom = 14.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -12.6875
+margin_top = -13.0556
+margin_right = 27.3125
+margin_bottom = 26.9444
+texture = ExtResource( 1 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
