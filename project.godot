@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "StaticBody2D",
 "class": "Repository",
 "language": "GDScript",
-"path": "res://src/environment/tree/Repository.gd"
+"path": "res://src/environment/Repository.gd"
 }, {
 "base": "Area2D",
 "class": "Ressource",
