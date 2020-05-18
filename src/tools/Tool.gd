@@ -4,6 +4,8 @@ class_name Tool
 
 export (int) var damage = 50
 
+var is_active : bool = false
+
 
 func use() -> void:
 	$AnimationPlayer.play("Use")

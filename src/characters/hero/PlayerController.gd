@@ -5,6 +5,7 @@ export (int) var speed = 100
 var velocity : Vector2 = Vector2()
 var can_move : bool = true
 
+var tools : Array
 var equipped_tool : Tool
 
 onready var directions : Dictionary = {
@@ -18,7 +19,7 @@ var look_dir : Vector2
 
 
 func _ready():
-	get_equipped_tool()
+	tools = get_tools()
 
 
 func _physics_process(_delta):
@@ -51,11 +52,18 @@ func _physics_process(_delta):
 
 		
 	if Input.is_action_just_pressed("ui_accept"):
-		equipped_tool.use()
+		if equipped_tool != null:
+			equipped_tool.use()
+
+	if Input.is_action_just_pressed("ui_1"):
+		equip_tool(tools[0])
+	elif Input.is_action_just_pressed("ui_2"):
+		equip_tool(tools[1])
 
 
 	if prev_dir != look_dir:
-		flip_tool(look_dir)
+		if equipped_tool != null:
+			flip_tool(look_dir)
 
 
 	if can_move:
@@ -64,14 +72,21 @@ func _physics_process(_delta):
 	play_animation(is_moving, look_dir)
 
 
-func get_equipped_tool() -> void:
-	equipped_tool = $Tool.get_child(0)
+func get_tools() -> Array:
+	var _tools = $Tools.get_children()
+	
+	return _tools
+
+
+func equip_tool(_tool : Tool) -> void:
+	equipped_tool = _tool
+
 
 
 func flip_tool(direction : Vector2) -> void:
 	var tool_offset = 8
 
-	$Tool.position = direction * tool_offset
+	equipped_tool.position = direction * tool_offset
 
 	if direction.x < 0:
 		equipped_tool.get_node("AnimatedSprite").flip_h = true
