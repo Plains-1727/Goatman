@@ -20,7 +20,7 @@ func take_damage(damage : int) -> void:
 		die()		
 
 
-func die():
+func die() -> void:
 	is_depleted = true
 
 	$AnimatedSprite.frame = 1

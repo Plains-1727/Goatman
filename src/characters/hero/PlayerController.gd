@@ -49,6 +49,7 @@ func _physics_process(_delta):
 	else:
 		velocity.x = 0
 
+		
 	if Input.is_action_just_pressed("ui_accept"):
 		equipped_tool.use()
 

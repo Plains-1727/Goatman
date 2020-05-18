@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://res/ressources/wood_drop.png" type="Texture" id=1]
 [ext_resource path="res://src/gui/GUI.gd" type="Script" id=2]
+[ext_resource path="res://src/gui/inventory/InventoryUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/gui/themes/goatman_theme.tres" type="Theme" id=4]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -25,3 +27,11 @@ stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="InventoryUI" parent="." instance=ExtResource( 3 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -120.0
+margin_right = 0.0
+margin_bottom = 100.0
+theme = ExtResource( 4 )
