@@ -26,6 +26,6 @@ func die() -> void:
 	$AnimatedSprite.frame = 1
 
 	var drop = ressource.instance()
-	drop.position = position
+	drop.position = position + Vector2(0, 32)
 
-	get_node("/root/Main").add_child(drop)
+	get_node("/root/Main").call_deferred("add_child", drop)

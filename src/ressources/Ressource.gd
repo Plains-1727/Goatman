@@ -13,6 +13,4 @@ func _ready():
 
 func _on_body_entered(body):
 	inventory.add_ressource(ressource, value)
-	
-	print (ressource + " added")
 	queue_free()
