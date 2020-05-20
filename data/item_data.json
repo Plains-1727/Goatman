@@ -1,0 +1,65 @@
+{
+    "001" : {
+        "item_name"         : "axe",
+        "item_type"         : "tool",
+        "item_icon"         : "res://res/tools/axe_icon.png",
+        "item_damage"       : "40",
+        "item_protection"   : "0",
+        "item_slot"         : "slot_mainhand",
+        "item_effect"       : "attack"
+    },
+    "002" : {
+        "item_name"         : "pickaxe",
+        "item_type"         : "tool",
+        "item_icon"         : "res://res/tools/pickaxe_icon.png",
+        "item_damage"       : "40",
+        "item_protection"   : "0",
+        "item_slot"         : "slot_mainhand",
+        "item_effect"       : "attack"
+    },
+    "003" : {
+        "item_name"         : "sword",
+        "item_type"         : "tool",
+        "item_icon"         : "res://res/tools/pickaxe_icon.png",
+        "item_damage"       : "80",
+        "item_protection"   : "0",
+        "item_slot"         : "slot_mainhand",
+        "item_effect"       : "attack"
+    },
+    "101" : {
+        "item_name"         : "leather_armor",
+        "item_type"         : "armor",
+        "item_icon"         : "",
+        "item_damage"       : "40",
+        "item_protection"   : "10",
+        "item_slot"         : "slot_mainhand",
+        "item_effect"       : "0"
+    },
+    "201" : {
+        "item_name"         : "health_potion",
+        "item_type"         : "consumable",
+        "item_icon"         : "",
+        "item_damage"       : "0",
+        "item_protection"   : "0",
+        "item_slot"         : "0",
+        "item_effect"       : "heal"
+    },
+    "301" : {
+        "item_name"         : "wood",
+        "item_type"         : "ressource",
+        "item_icon"         : "",
+        "item_damage"       : "0",
+        "item_protection"   : "0",
+        "item_slot"         : "0",
+        "item_effect"       : "0"
+    },
+    "302" : {
+        "item_name"         : "stone",
+        "item_type"         : "ressource",
+        "item_icon"         : "",
+        "item_damage"       : "0",
+        "item_protection"   : "0",
+        "item_slot"         : "0",
+        "item_effect"       : "0"
+    }
+}

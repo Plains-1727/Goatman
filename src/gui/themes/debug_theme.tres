@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=2]
+[gd_resource type="Theme" load_steps=5 format=2]
 
 [ext_resource path="res://src/gui/themes/pixel_font.tres" type="DynamicFont" id=1]
 
@@ -15,6 +15,9 @@ corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.698039, 0.698039, 0.698039, 0.376471 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.113725, 0.0941176, 0.184314, 0.54902 )
@@ -37,21 +40,22 @@ ItemList/styles/cursor = null
 ItemList/styles/cursor_unfocused = null
 ItemList/styles/selected = null
 ItemList/styles/selected_focus = null
+TooltipPanel/styles/panel = SubResource( 3 )
 Tree/colors/custom_button_font_highlight = Color( 0.94, 0.94, 0.94, 1 )
 Tree/colors/drop_position_color = Color( 1, 0.3, 0.2, 1 )
 Tree/colors/font_color = Color( 0.69, 0.69, 0.69, 1 )
 Tree/colors/font_color_selected = Color( 1, 1, 1, 1 )
-Tree/colors/guide_color = Color( 0, 0, 0, 0.1 )
+Tree/colors/guide_color = Color( 1, 1, 1, 0.0392157 )
 Tree/colors/relationship_line_color = Color( 0.27, 0.27, 0.27, 1 )
 Tree/colors/title_button_color = Color( 0.88, 0.88, 0.88, 1 )
-Tree/constants/button_margin = 4
+Tree/constants/button_margin = 1
 Tree/constants/draw_guides = 1
 Tree/constants/draw_relationship_lines = 0
-Tree/constants/hseparation = 4
-Tree/constants/item_margin = 12
+Tree/constants/hseparation = 1
+Tree/constants/item_margin = 1
 Tree/constants/scroll_border = 4
 Tree/constants/scroll_speed = 12
-Tree/constants/vseparation = 4
+Tree/constants/vseparation = 1
 Tree/fonts/font = null
 Tree/fonts/title_button_font = null
 Tree/icons/arrow = null

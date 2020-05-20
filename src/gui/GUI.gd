@@ -3,7 +3,8 @@ extends CanvasLayer
 class_name GUI
 
 onready var ui_elements : Dictionary = {
-	"inventory" : $InventoryUI
+	"inventory" : $InventoryUI,
+	"item_db_viewer" : $ItemDBViewer
 }
 
 
